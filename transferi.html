@@ -1,264 +1,67 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transferi — STIT Taxi Njivice, Krk</title>
-<meta name="description" content="Premium transferi iz Njivica: zračna luka, apartmani, vile, hoteli, po otoku Krku i međugradski transferi po dogovoru. Brza rezervacija, jasan dogovor.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transferi | STIT TAXI Krk</title>
+  <meta name="description" content="Transferi iz Njivica prema zračnoj luci, apartmanima, hotelima, vilama, otoku Krku i međugradskim destinacijama po dogovoru." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="header"><div class="container nav"><a class="logo" href="index.html"><span class="logo-mark">S</span><span>STIT TAXI <small>Njivice • Krk</small></span></a><nav class="nav-links"><a href="index.html">Početna</a><a href="o-nama.html">O nama</a><a href="usluge.html">Usluge</a><a class="active" href="transferi.html">Transferi</a><a href="kontakt.html">Kontakt</a></nav><div class="nav-actions"><a class="btn btn-ghost" href="tel:+385959046777">Nazovi</a><a class="btn btn-primary" href="kontakt.html">Pošalji upit</a><button class="menu-btn" type="button" aria-label="Otvori izbornik" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
 
-<div class="grain"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <div class="breadcrumb"><a href="index.html">Početna</a> / <span>Transferi</span></div>
+        <h1>Privatni transferi za turiste, apartmane i <span class="gold">zračne luke</span>.</h1>
+        <p>Posebna stranica za transfere daje ozbiljniji dojam i pomaže korisnicima da odmah pošalju relaciju, datum i vrijeme vožnje.</p>
+      </div>
+    </section>
 
-<!-- ============ NAV ============ -->
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a href="index.html" class="nav__logo">STIT <span>Taxi · Njivice</span></a>
-    <nav class="nav__links">
-      <a href="index.html">Početna</a>
-      <a href="o-nama.html">O nama</a>
-      <a href="usluge.html">Usluge</a>
-      <a href="transferi.html" class="active">Transferi</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <div class="nav__cta">
-      <a href="tel:+385959046777" class="nav__phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        095 904 6777
-      </a>
-      <a href="kontakt.html" class="btn btn-ghost">Pošalji upit</a>
-      <a href="tel:+385959046777" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Nazovi odmah
-      </a>
-    </div>
-    <button class="nav__burger" aria-label="Meni"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<!-- ============ MOBILE MENU ============ -->
-<div class="mobile-menu">
-  <a href="index.html">Početna</a>
-  <a href="o-nama.html">O nama</a>
-  <a href="usluge.html">Usluge</a>
-  <a href="transferi.html" class="active">Transferi</a>
-  <a href="kontakt.html">Kontakt</a>
-  <div class="mobile-menu__foot">
-    <a href="tel:+385959046777" class="btn btn-primary">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Nazovi odmah · 095 904 6777
-    </a>
-    <a href="kontakt.html" class="btn btn-ghost">Pošalji upit</a>
-  </div>
-</div>
-
-<!-- ============ PAGE HERO ============ -->
-<section class="page-hero">
-  <div class="page-hero__bg">
-    <img src="images/page-hero-transferi.jpg" alt="">
-  </div>
-  <div class="wrap">
-    <div class="eyebrow">Transferi</div>
-    <h1>Privatni transferi s otoka Krka i na otok Krk</h1>
-    <p>Unaprijed dogovorena relacija, fiksan termin i vozilo koje čeka na vrijeme — bilo da dolazite na odmor ili odlazite prema zračnoj luci.</p>
-    <div class="breadcrumb">
-      <a href="index.html">Početna</a>
-      <span>→</span>
-      <span style="color: var(--gold-bright);">Transferi</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INTRO + IMAGE ============ -->
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="grid-2">
-      <div class="feature-media" data-reveal>
-        <img src="images/transfer-vehicle.jpg" alt="Privatno transfer vozilo STIT na noćnoj cesti, otok Krk">
-        <div class="feature-media__caption">
-          <span>STIT · Transferi</span>
-          Jedna vožnja, jedan dogovor — bez presjedanja i čekanja.
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal"><span class="kicker">Transfer zone</span><h2>Prezentacija usluge za najčešće potrebe korisnika.</h2></div>
+        <div class="grid-3" style="margin-top:34px;">
+          <article class="card reveal"><div class="icon">⌁</div><h3>Transferi iz Njivica</h3><p>Prijevoz iz Njivica prema drugim mjestima na Krku, smještaju ili dogovorenim lokacijama.</p></article>
+          <article class="card reveal delay-1"><div class="icon">✈</div><h3>Transferi prema zračnoj luci</h3><p>Organizirani dolasci i odlasci prema zračnim lukama po prethodnoj rezervaciji.</p></article>
+          <article class="card reveal delay-2"><div class="icon">🏨</div><h3>Apartmani, vile i hoteli</h3><p>Prijevoz gostiju od/do smještaja, recepcije, luke ili druge lokacije.</p></article>
+          <article class="card reveal"><div class="icon">◎</div><h3>Transferi po otoku Krku</h3><p>Vožnje prema plažama, restoranima, marinama, turističkim mjestima i event lokacijama.</p></article>
+          <article class="card reveal delay-1"><div class="icon">⇄</div><h3>Međugradski transferi</h3><p>Duže relacije i posebne vožnje mogu se dogovoriti unaprijed.</p></article>
+          <article class="card reveal delay-2"><div class="icon">☾</div><h3>Večernji transferi</h3><p>Prijevoz za večernje izlaske, restorane, evente i povratak do smještaja po dogovoru.</p></article>
         </div>
       </div>
+    </section>
 
-      <div data-reveal data-reveal-delay="2">
-        <div class="eyebrow">Premium transfer usluga</div>
-        <h2 style="font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 16px 0 22px;">Transfer dogovoren unaprijed, bez iznenađenja</h2>
-        <p class="lede" style="max-width: 50ch; margin-bottom: 22px;">Svaki transfer planira se prema vašem terminu — dolazak trajekta, polazak leta ili check-in u smještaju. Vozilo je na mjestu na vrijeme, a relacija i cijena dogovaraju se prije polaska.</p>
-        <p class="lede" style="max-width: 50ch;">Pogodno za pojedince, parove, obitelji i veće skupine — javite broj putnika i prtljage kako bismo organizirali odgovarajuće vozilo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ROUTES ============ -->
-<section class="section section--divider">
-  <div class="wrap">
-    <div class="section__head section__head--center" data-reveal>
-      <div class="eyebrow">Smjerovi</div>
-      <h2>Transferi za svaku relaciju</h2>
-      <p class="lede" style="margin: 0 auto;">Od Njivica do bilo koje točke na otoku, prema zračnoj luci ili dalje na kopno.</p>
-    </div>
-
-    <div class="routes" data-reveal data-reveal-delay="1">
-      <div class="route-row">
-        <div class="route-row__name">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5.5 5 9.5c0 5 7 12.5 7 12.5s7-7.5 7-12.5C19 5.5 16 2 12 2z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-          Transferi iz Njivica
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><div class="section-title"><span class="kicker">Rezervacija</span><h2>Kako rezervirati vožnju?</h2><p>Jednostavno objašnjenje smanjuje pitanja i vodi korisnika prema slanju upita.</p></div></div>
+        <div class="process">
+          <article class="card step reveal"><h3>Pošaljite upit</h3><p>Unesite relaciju, datum, vrijeme i broj putnika kroz kontakt formu ili WhatsApp.</p></article>
+          <article class="card step reveal delay-1"><h3>Dogovorite detalje</h3><p>Potvrdite vrijeme polaska, mjesto preuzimanja i eventualne dodatne informacije.</p></article>
+          <article class="card step reveal delay-2"><h3>Uživajte u vožnji</h3><p>Vožnja je dogovorena unaprijed, a korisnik zna što može očekivati.</p></article>
         </div>
-        <div class="route-row__desc">Polasci direktno iz Njivica prema bilo kojoj destinaciji na otoku ili izvan njega, prema dogovorenom terminu.</div>
-        <a href="kontakt.html" class="btn btn-ghost">Zatraži vožnju</a>
       </div>
-      <div class="route-row">
-        <div class="route-row__name">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V12l6-9 6 9v10M10 22v-6h4v6M9 7h6M8 10h8"/></svg>
-          Transferi prema zračnoj luci
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="split-panel reveal">
+          <span class="kicker">Za iznajmljivače</span>
+          <h2 style="font-size:clamp(2rem,4vw,3.6rem);line-height:1;letter-spacing:-.055em;margin:16px 0;">Odličan dodatak za goste apartmana i vila.</h2>
+          <p style="color:var(--muted);">Iznajmljivači mogu svojim gostima poslati link web stranice kako bi brzo zatražili prijevoz od zračne luke, luke, autobusnog kolodvora ili druge lokacije.</p>
+          <ul class="lux-list"><li><span class="tick">✓</span><span>Jasna forma za relaciju i termin vožnje.</span></li><li><span class="tick">✓</span><span>Profesionalniji dojam kod gostiju.</span></li><li><span class="tick">✓</span><span>Manje objašnjavanja preko poruka i telefona.</span></li></ul>
         </div>
-        <div class="route-row__desc">Transfer do zračne luke Rijeka i drugih aerodroma, usklađen s vremenom leta — stignite na vrijeme, bez stresa.</div>
-        <a href="kontakt.html" class="btn btn-ghost">Zatraži vožnju</a>
+        <div class="photo-tile reveal delay-1"></div>
       </div>
-      <div class="route-row">
-        <div class="route-row__name">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-4h6v4M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>
-          Transferi za apartmane, vile i hotele
-        </div>
-        <div class="route-row__desc">Doček gostiju na trajektu, autobusnoj stanici ili aerodromu i prijevoz direktno do smještaja — i obrnuto prilikom odlaska.</div>
-        <a href="kontakt.html" class="btn btn-ghost">Zatraži vožnju</a>
-      </div>
-      <div class="route-row">
-        <div class="route-row__name">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Transferi po otoku Krku
-        </div>
-        <div class="route-row__desc">Povezivanje mjesta na otoku — Njivice, Malinska, Krk, Punat, Baška i druga odredišta po dogovoru.</div>
-        <a href="kontakt.html" class="btn btn-ghost">Zatraži vožnju</a>
-      </div>
-      <div class="route-row">
-        <div class="route-row__name">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13M9 9l12-2M6 18a3 3 0 1 0 0 6 3 3 0 1 0 0-6zM18 16a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"/></svg>
-          Međugradski transferi po dogovoru
-        </div>
-        <div class="route-row__desc">Vožnje prema drugim gradovima na otoku i kopnu — relacija, termin i broj putnika dogovaraju se unaprijed.</div>
-        <a href="kontakt.html" class="btn btn-ghost">Zatraži vožnju</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ HOW TO BOOK ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section__head section__head--center" data-reveal>
-      <div class="eyebrow">Kako rezervirati vožnju?</div>
-      <h2>Tri jednostavna koraka</h2>
-      <p class="lede" style="margin: 0 auto;">Bez registracija i složenih formulara — od upita do vožnje u nekoliko poteza.</p>
-    </div>
+    <section class="section-sm"><div class="container cta-band reveal"><div><span class="kicker">Upit za transfer</span><h2>Unesite relaciju i vrijeme polaska.</h2><p>Kontakt forma priprema poruku za WhatsApp kako bi se vožnja mogla brzo dogovoriti.</p></div><div class="hero-actions" style="margin:0;justify-content:flex-end;"><a class="btn btn-primary" href="kontakt.html">Pošalji upit</a><a class="btn" href="tel:+385959046777">Nazovi odmah</a></div></div></section>
+  </main>
 
-    <div class="steps" data-reveal data-reveal-delay="1">
-      <div class="step">
-        <div class="step__num">1</div>
-        <h3>Pošaljite upit</h3>
-        <p>Nazovite, pošaljite poruku ili upit putem kontakt forme s osnovnim podacima o vožnji.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">2</div>
-        <h3>Dogovorite relaciju i termin</h3>
-        <p>Potvrđujemo relaciju, vrijeme polaska, broj putnika i sve detalje vožnje.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">3</div>
-        <h3>Uživajte u sigurnoj vožnji</h3>
-        <p>Vozilo stiže na dogovoreno mjesto i vrijeme — vi se samo opustite i prepustite vožnju nama.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BANNER ============ -->
-<section class="section section--divider">
-  <div class="wrap">
-    <div class="cta-banner" data-reveal>
-      <div class="eyebrow" style="justify-content:center; display:flex;">Trebate prijevoz?</div>
-      <h2>Javite se i dogovorite vožnju u nekoliko minuta</h2>
-      <p>Nazovite ili pošaljite upit s relacijom, terminom i brojem putnika — odgovaramo brzo i jasno.</p>
-      <div class="cta-banner__actions">
-        <a href="tel:+385959046777" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          095 904 6777
-        </a>
-        <a href="kontakt.html" class="btn btn-ghost">Pošalji upit</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <div>
-        <div class="footer__logo">STIT <span style="color:var(--gold-bright);">Taxi</span></div>
-        <p class="footer__tag">Obrt za prijevoz putnika · Njivice, otok Krk. Profesionalan prijevoz za lokalne vožnje, turiste, transfere i posebne prigode.</p>
-      </div>
-      <div>
-        <h5>Navigacija</h5>
-        <ul>
-          <li><a href="index.html">Početna</a></li>
-          <li><a href="o-nama.html">O nama</a></li>
-          <li><a href="usluge.html">Usluge</a></li>
-          <li><a href="transferi.html">Transferi</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Usluge</h5>
-        <ul>
-          <li><a href="usluge.html">Lokalni taxi prijevoz</a></li>
-          <li><a href="transferi.html">Transfer do zračne luke</a></li>
-          <li><a href="usluge.html">Privatni transfer</a></li>
-          <li><a href="usluge.html">Noćne vožnje</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Kontakt</h5>
-        <ul>
-          <li><a href="tel:+385959046777">095 904 6777</a></li>
-          <li><a href="#">Ribarska obala 24, Njivice</a></li>
-          <li><a href="#">Otok Krk, Hrvatska</a></li>
-          <li><a href="kontakt.html">Pošalji upit →</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="divider-line"></div>
-    <div class="footer__bottom">
-      <span>© 2026 STIT — obrt za prijevoz putnika, vl. Stipe Prodan. Sva prava pridržana.</span>
-      <span>Njivice · Otok Krk</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ============ FLOATING CTA ============ -->
-<div class="float-cta">
-  <a href="https://wa.me/385959046777" class="float-cta__whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.74 13.4L3 21l3.7-1.27a8.94 8.94 0 0 0 5.35 1.72h.01A8.94 8.94 0 0 0 21 12.5a8.86 8.86 0 0 0-2.65-6.18zm-5.55 13.7h-.01a7.4 7.4 0 0 1-4.5-1.55l-.32-.2-3.34 1.15 1.12-3.27-.21-.34a7.42 7.42 0 0 1 11.5-9.18 7.36 7.36 0 0 1 2.18 5.27 7.43 7.43 0 0 1-6.42 8.12zm4.07-5.56c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.21-.57.72-.7.87-.13.15-.26.16-.48.05-.22-.1-.94-.35-1.78-1.1a6.66 6.66 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.11-.11.25-.28.37-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.41-.07-.11-.6-1.45-.82-1.98-.22-.53-.45-.46-.62-.46-.16 0-.34-.02-.53-.02-.18 0-.48.07-.74.34-.25.27-.97.95-.97 2.3 0 1.36.99 2.67 1.13 2.85.14.18 1.9 2.9 4.6 3.95 2.7 1.06 2.7.7 3.19.66.49-.05 1.58-.65 1.8-1.27.22-.62.22-1.16.16-1.27-.06-.11-.22-.18-.44-.29z"/></svg>
-  </a>
-  <a href="tel:+385959046777" class="float-cta__call" aria-label="Nazovi">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-  </a>
-</div>
-
-<!-- ============ STICKY MOBILE CALL BAR ============ -->
-<div class="sticky-call">
-  <a href="tel:+385959046777" class="btn btn-primary">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Nazovi odmah
-  </a>
-  <a href="kontakt.html" class="btn btn-ghost">Upit</a>
-</div>
-
-<script src="script.js"></script>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><a class="logo" href="index.html"><span class="logo-mark">S</span><span>STIT TAXI <small>Njivice • Krk</small></span></a><p style="margin-top:18px;max-width:420px;">Premium demo web stranica za taxi i private transfer usluge na otoku Krku.</p></div><div><h3>Stranice</h3><div class="footer-links"><a href="index.html">Početna</a><a href="o-nama.html">O nama</a><a href="usluge.html">Usluge</a><a href="transferi.html">Transferi</a></div></div><div><h3>Kontakt</h3><div class="footer-links"><a href="tel:+385959046777">095 904 6777</a><a href="kontakt.html">Pošalji upit</a><a href="https://wa.me/385959046777" target="_blank" rel="noopener">WhatsApp</a></div></div><div><h3>Lokacija</h3><p>Ribarska obala 24<br>Njivice, otok Krk</p></div></div><div class="footer-bottom"><span>© <span data-year></span> STIT TAXI. Sva prava pridržana.</span><span>Izrada demo web stranice: Medium29</span></div></div></footer>
+  <div class="float-actions"><a class="call" href="tel:+385959046777" aria-label="Nazovi STIT TAXI">☎</a><a class="wa" href="https://wa.me/385959046777" target="_blank" rel="noopener" aria-label="WhatsApp STIT TAXI">☘</a></div>
+  <script src="script.js"></script>
 </body>
 </html>

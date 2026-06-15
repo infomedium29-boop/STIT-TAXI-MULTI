@@ -1,125 +1,62 @@
-// ============================================
-// STIT TAXI — shared interactivity
-// ============================================
+const header = document.querySelector('.header');
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const year = document.querySelector('[data-year]');
+const phoneNational = '095 904 6777';
+const whatsappNumber = '385959046777';
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Sticky nav background
-  const nav = document.querySelector(".nav");
-  const onScroll = () => {
-    if (window.scrollY > 40) nav?.classList.add("scrolled");
-    else nav?.classList.remove("scrolled");
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+if (year) year.textContent = new Date().getFullYear();
 
-  // Mobile menu
-  const burger = document.querySelector(".nav__burger");
-  const mobileMenu = document.querySelector(".mobile-menu");
-  burger?.addEventListener("click", () => {
-    burger.classList.toggle("open");
-    mobileMenu?.classList.toggle("open");
-    document.body.style.overflow = mobileMenu?.classList.contains("open") ? "hidden" : "";
+function updateHeader(){
+  if(!header) return;
+  header.classList.toggle('is-scrolled', window.scrollY > 20);
+}
+updateHeader();
+window.addEventListener('scroll', updateHeader, {passive:true});
+
+if(menuBtn && navLinks){
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  mobileMenu?.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => {
-      burger?.classList.remove("open");
-      mobileMenu?.classList.remove("open");
-      document.body.style.overflow = "";
-    })
-  );
-
-  // Scroll reveal
-  const revealEls = document.querySelectorAll("[data-reveal]");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
-  }
-
-  // Animated counters
-  const counters = document.querySelectorAll("[data-count]");
-  const animateCounter = (el) => {
-    const target = parseFloat(el.dataset.count);
-    const decimals = el.dataset.count.includes(".") ? 1 : 0;
-    const duration = 1400;
-    const start = performance.now();
-    const step = (now) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const val = target * eased;
-      el.textContent = decimals ? val.toFixed(decimals) : Math.round(val);
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = decimals ? target.toFixed(decimals) : target;
-    };
-    requestAnimationFrame(step);
-  };
-  if (counters.length && "IntersectionObserver" in window) {
-    const cIo = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            cIo.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    counters.forEach((el) => cIo.observe(el));
-  }
-
-  // Hero parallax (subtle, desktop only)
-  const heroBg = document.querySelector(".hero__bg img");
-  if (heroBg && window.matchMedia("(min-width: 860px)").matches) {
-    window.addEventListener(
-      "scroll",
-      () => {
-        const y = window.scrollY;
-        if (y < window.innerHeight) {
-          heroBg.style.transform = `scale(1.08) translateY(${y * 0.12}px)`;
-        }
-      },
-      { passive: true }
-    );
-  }
-
-  // Contact form -> Web3Forms (basic submit handling, demo placeholder)
-  const forms = document.querySelectorAll("[data-contact-form]");
-  forms.forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector("button[type='submit']");
-      const original = btn.innerHTML;
-      btn.innerHTML = "Šaljem upit...";
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = "Upit poslan ✓";
-        form.reset();
-        setTimeout(() => {
-          btn.innerHTML = original;
-          btn.disabled = false;
-        }, 2600);
-      }, 900);
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
     });
   });
+}
 
-  // Active nav link by current page
-  const current = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav__links a, .mobile-menu a").forEach((a) => {
-    const href = a.getAttribute("href");
-    if (href === current || (current === "" && href === "index.html")) {
-      a.classList.add("active");
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
     }
   });
+}, {threshold: .12});
+revealEls.forEach(el => observer.observe(el));
+
+function encodeForm(form){
+  const data = new FormData(form);
+  const lines = [];
+  for (const [key, value] of data.entries()) {
+    if(String(value).trim()) lines.push(`${key}: ${value}`);
+  }
+  const relacija = data.get('Relacija') || data.get('Odakle i dokle') || '';
+  return `Pozdrav, zanima me taxi / transfer usluga STIT TAXI.${relacija ? `\nRelacija: ${relacija}` : ''}\n\n${lines.join('\n')}`;
+}
+
+document.querySelectorAll('form[data-whatsapp-form]').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const message = encodeURIComponent(encodeForm(form));
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
+  });
 });
+
+const phoneEls = document.querySelectorAll('[data-phone]');
+phoneEls.forEach(el => el.textContent = phoneNational);
