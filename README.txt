@@ -21,3 +21,10 @@ Upute:
 Kontakt forma:
 Forma trenutno otvara WhatsApp poruku na broj 095 904 6777.
 Ako klijent želi e-mail formu, može se kasnije spojiti Web3Forms, Formspree ili backend forma.
+
+Dodane fotografije:
+- assets/images/hero-taxi.avif
+- assets/images/o-nama-taxi.avif
+- assets/images/usluge-taxi.avif
+- assets/images/transferi-taxi.avif
+- assets/images/apartmani-transfer.avif
