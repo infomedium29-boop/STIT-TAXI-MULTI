@@ -19,7 +19,7 @@ Upute:
 5. Deploy.
 
 Kontakt forma:
-Forma trenutno otvara WhatsApp poruku na broj 095 904 6777.
+Forma trenutno otvara WhatsApp poruku na broj +385 95 904 6777.
 Ako klijent želi e-mail formu, može se kasnije spojiti Web3Forms, Formspree ili backend forma.
 
 Dodane fotografije:

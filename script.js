@@ -2,7 +2,7 @@ const header = document.querySelector('.header');
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 const year = document.querySelector('[data-year]');
-const phoneNational = '095 904 6777';
+const phoneNational = '+385 95 904 6777';
 const whatsappNumber = '385959046777';
 
 if (year) year.textContent = new Date().getFullYear();
